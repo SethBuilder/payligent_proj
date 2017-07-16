@@ -1,0 +1,65 @@
+{% extends 'payligent/base.html' %}
+{% load staticfiles %}
+
+
+
+{% block body %}
+
+<!-- HEADER -->
+<div class="header" id="header">
+	<div class="container-fluid">
+			<div class="row">
+
+				<section>
+					<h1>UAE'S AFFORDABLE ONLINE PAYMENT SOLUTION </h1>
+					<h3>Accept Payments Online Through your website, mobile app, email or social accounts.</h3>
+					<button class="header-button">Learn More</button>
+		            <button class="header-button" id="black-button">Pick a Plan</button>
+				</section>
+
+				<object type="image/svg+xml" data=" {% static 'images/ae.svg' %} ">
+						Your browser does not support SVG
+				</object>
+
+			</div>
+	</div>
+</div>
+<!-- END HEADER -->
+
+
+<!-- FEATURES -->
+<div id="features" class="features">
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="col-md-4 col-xs-12 ">
+				<div class="feature">
+				<img src=" {% static 'images/uaeprivacy.png' %} ">
+				<h2>UAE Privacy</h2> 
+				<p>Payligent is Based in the UAE following local privacy and quality standards.</p>
+			</div>
+			</div>
+
+			<div class="col-md-4 col-xs-12">
+			<div class="feature">
+				<img src=" {% static 'images/affordable.png' %} ">
+				<h2>Affordable</h2> 
+				<p>We use special tech stack to cut cost. Only pay for what you need!</p>
+			</div>
+			</div>
+
+			<div class="col-md-4 col-xs-12">
+			<div class="feature">
+				<img src=" {% static 'images/scale.png' %} ">
+				<h2>Scalable</h2> 
+				<p>It's super easy to scale up your platform with our straighforward plans.</p>
+			</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- END FEATURES -->
+
+{% endblock %}
