@@ -5,33 +5,119 @@
 
 {% block body %}
 
+    <script type="text/javascript" src=" {% static 'js/jquery.fullPage.js' %} "></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+	$('#fullpage').fullpage({
+		//Navigation
+		menu: '#menu',
+		lockAnchors: false,
+		
+		navigation: false,
+		navigationPosition: 'right',
+		navigationTooltips: ['firstSlide', 'secondSlide'],
+		showActiveTooltip: false,
+		slidesNavigation: false,
+		slidesNavPosition: 'bottom',
+
+		//Scrolling
+		css3: false,
+		scrollingSpeed: 700,
+		autoScrolling: true,
+		fitToSection: true,
+		fitToSectionDelay: 3000,
+		scrollBar: true,
+		easing: 'easeInOutCubic',
+		easingcss3: 'ease',
+		loopBottom: false,
+		loopTop: false,
+		loopHorizontal: true,
+		continuousVertical: false,
+		continuousHorizontal: false,
+		scrollHorizontally: false,
+		interlockedSlides: false,
+		dragAndMove: false,
+		offsetSections: false,
+		resetSliders: false,
+		fadingEffect: false,
+		normalScrollElements: '#element1, .element2',
+		scrollOverflow: false,
+		scrollOverflowReset: false,
+		scrollOverflowOptions: null,
+		touchSensitivity: 15,
+		normalScrollElementTouchThreshold: 5,
+		bigSectionsDestination: null,
+
+		//Accessibility
+		keyboardScrolling: true,
+		animateAnchor: true,
+		recordHistory: true,
+
+		//Design
+		controlArrows: true,
+		verticalCentered: false,
+		// sectionsColor : ['#ccc', '#fff'],
+		paddingTop: '0em',
+		paddingBottom: '0px',
+		fixedElements: '#header,',
+		responsiveWidth: 0,
+		responsiveHeight: 0,
+		responsiveSlides: false,
+		parallax: false,
+		parallaxOptions: {type: 'reveal', percentage: 100, property: 'translate'},
+
+		//Custom selectors
+		sectionSelector: '.section',
+		slideSelector: '.slide',
+
+		lazyLoading: true,
+
+		//events
+		onLeave: function(index, nextIndex, direction){},
+		afterLoad: function(anchorLink, index){},
+		afterRender: function(){},
+		afterResize: function(){},
+		afterResponsive: function(isResponsive){},
+		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+	});
+});
+    </script>
+
+
+
 <!-- HEADER -->
+
+
+<div class="section active">
 <div class="header" id="header">
 	<div class="container-fluid">
-			<div class="row">
+		<div class="row">
 
-				<section class="wow bounceInDown">
-					<h1>UAE'S AFFORDABLE ONLINE PAYMENT SOLUTION </h1>
-					<h3>Accept Payments Online Through your website, mobile app, email or social accounts.</h3>
-					<a href="#features"><button class="header-button">Learn More</button></a>
-		            <a href="#pricing"><button class="header-button" id="black-button">Pick a Plan</button></a>
-				</section>
+			<section class="wow bounceInDown">
+				<h1>UAE'S AFFORDABLE ONLINE PAYMENT SOLUTION </h1>
+				<h3>Accept Payments Online Through your website, mobile app, email or social accounts.</h3>
+				<a href="#features"><button class="header-button">Learn More</button></a>
+				<a href="#pricing"><button class="header-button" id="black-button">Pick a Plan</button></a>
+			</section>
 
-				<object type="image/svg+xml" data=" {% static 'images/ae.svg' %} " class="wow bounceInUp">
-						Your browser does not support SVG
-				</object>
+			<object type="image/svg+xml" data=" {% static 'images/ae.svg' %} " class="wow bounceInUp">
+				Your browser does not support SVG
+			</object>
 
-			</div>
+		</div>
 	</div>
+</div>
 </div>
 <!-- END HEADER -->
 
 
 <!-- FEATURES -->
+<div class="section">
 <div id="features" class="features">
 	<div class="container-fluid">
 		<div class="row">
-		<h1 class="wow fadeInUp">Features</h1>
+			<h1 class="wow fadeInUp">Features</h1>
 			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='1.4s'>
 				<div class="feature">
 					<img src=" {% static 'images/uaeprivacy.png' %} ">
@@ -59,16 +145,16 @@
 		</div>
 	</div>
 </div>
-
+</div>
 <!-- END FEATURES -->
 
 
 <!-- TESTIMONIALS -->
-
+<div class="section">
 <div id="testi" class="testi">
 	<div class="container">
 		<div class="row">
-		<object type="image/svg+xml" data=" {% static 'images/ae_dots.svg' %} ">
+			<object type="image/svg+xml" data=" {% static 'images/ae_dots.svg' %} ">
 				Your browser does not support SVG
 			</object>
 			<h2 class="wow fadeInUp">We have some great clients <strong>Who love us</strong></h2>
@@ -88,7 +174,7 @@
 					<p class="name"><b>Fadi A. </b> | Internet Professional</p>
 				</div>
 			</div>
- 
+
 			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='0.8s'>
 				<div class="person">
 					<img src=" {% static 'images/martin.jpg' %} " class="img-responsive img-circle">
@@ -100,11 +186,12 @@
 		</div>
 	</div>
 </div>
-
+</div>
 <!-- END TESTIMOINIALS -->
 
 
 <!-- PRICING -->
+<div class="section">
 <div class="pricing" id="pricing">
 	<div class="container">
 		<div class="row">
@@ -199,66 +286,66 @@
 		</div>
 	</div>						
 </div>
+</div>
 <!-- END PRICING -->
 
 
 
 <!-- CONTACT -->
-<!-- <div class="fullscreen-bg"> -->
+<div class="section">
 <div id="contact" class="contact">
 
 <!--     <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
         <source src=" {% static 'videos/typing.mp4' %} " type="video/mp4">
-    </video> -->
+        </video> -->
 
-			<h2 class="wow fadeInUp">Contact us!</h2>
-			<p class="lead wow fadeInUp" data-wow-delay='0.4s'>We'll respond to your query within one business day.</p>
-	<div class="container">
-		<div class="row">
-		<form action="mailto:moghrabi@gmail.com" method="post" enctype="text/plain">
-			<div class="col-md-6">
-				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.8s'>
-					<span class="input-group-addon" id="sizing-addon1">
-						<i class="fa fa-user" aria-hidden="true"></i>
-					</span>
-					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Full Name" name="name">
-				</div>
+        <h2 class="wow fadeInUp">Contact us!</h2>
+        <p class="lead wow fadeInUp" data-wow-delay='0.4s'>We'll respond to your query within one business day.</p>
+        <div class="container">
+        	<div class="row">
+        		<form action="mailto:moghrabi@gmail.com" method="post" enctype="text/plain">
+        			<div class="col-md-6">
+        				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.8s'>
+        					<span class="input-group-addon" id="sizing-addon1">
+        						<i class="fa fa-user" aria-hidden="true"></i>
+        					</span>
+        					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Full Name" name="name">
+        				</div>
 
-				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='1.2s'>
-					<span class="input-group-addon" id="sizing-addon1">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-					</span>
-					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Email Address" required name="email">
-				</div>
+        				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='1.2s'>
+        					<span class="input-group-addon" id="sizing-addon1">
+        						<i class="fa fa-envelope" aria-hidden="true"></i>
+        					</span>
+        					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Email Address" required name="email">
+        				</div>
 
-				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='1.6s'>
-					<span class="input-group-addon" id="sizing-addon1">
-						<i class="fa fa-phone" aria-hidden="true"></i>
-					</span>
-					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Phone Number (optional)" name="phone">
-				</div>
-			</div>
+        				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='1.6s'>
+        					<span class="input-group-addon" id="sizing-addon1">
+        						<i class="fa fa-phone" aria-hidden="true"></i>
+        					</span>
+        					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Phone Number (optional)" name="phone">
+        				</div>
+        			</div>
 
-			<div class="col-md-6">
-				<div class="input-group wow fadeInUp" data-wow-delay='2s'>
-					<textarea class="form-control" cols="80" rows="6" name="message" placeholder="Type here..." style="width:100%"></textarea>
-				</div>
-				<button class="btn btn-lg wow fadeInUp" data-wow-delay='2.4s'>Send Your Message</button>
-			</div>
-		</form>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
+        			<div class="col-md-6">
+        				<div class="input-group wow fadeInUp" data-wow-delay='2s'>
+        					<textarea class="form-control" cols="80" rows="6" name="message" placeholder="Type here..." style="width:100%"></textarea>
+        				</div>
+        				<button class="btn btn-lg wow fadeInUp" data-wow-delay='2.4s'>Send Your Message</button>
+        			</div>
+        		</form>
+        	</div>
+        </div>
+    </div>
+    </div>
 <!-- END CONTACT -->
 
-
+<div class="section" id="footer-sec">
 <div class="footer" id="footer">
 	<div class="container">
 		<div class="row">
 
-            <h4 id="logo" class="col-md-2"><a href="#">Payligent</a></h4>
+			<h4 id="logo" class="col-md-2"><a href="#">Payligent</a></h4>
 
 			<div class="col-md-3">
 
@@ -305,5 +392,10 @@
 		</div>
 	</div>
 </div>
+</div>
+
+
+
+
 
 {% endblock %}
