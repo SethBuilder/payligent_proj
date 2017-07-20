@@ -132,6 +132,7 @@ ul.sidenav li a:hover:not(.active) {
     background-image: url('/static/images/machine.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center center;
     opacity: .4;
 }
@@ -302,6 +303,7 @@ ul.sidenav li a:hover:not(.active) {
     right: 0;
     background-image: url('/static/images/tablet.jpg');
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     opacity: .4;
