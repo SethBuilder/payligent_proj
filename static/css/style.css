@@ -192,6 +192,8 @@ ul.sidenav li a:hover:not(.active) {
     padding: 60px 60px;
     text-align: center;
     background-color: #eeeeee;
+    border:none;
+    outline: none;
 }
 
 .features h2, .person h2{
