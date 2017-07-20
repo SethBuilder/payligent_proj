@@ -192,6 +192,7 @@ ul.sidenav li a:hover:not(.active) {
     padding: 60px 60px;
     text-align: center;
     background-color: #eeeeee;
+    outline: none !important;
 }
 
 .features h2, .person h2{
@@ -288,7 +289,8 @@ ul.sidenav li a:hover:not(.active) {
 
 /*PRICING*/
 .pricing{
-    padding: 50px 0 80px;
+    padding: 40px 0 30px;
+
     text-align: center;
     position: relative;
 }
@@ -315,7 +317,7 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 .pricing h1{
-    font-size: 40px;
+    font-size: 30px;
     color: #000;
 }
 
@@ -331,15 +333,15 @@ ul.sidenav li a:hover:not(.active) {
     
     /*border: 1px solid #ccc;*/
     border-radius: 5px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 
 
 .package li {
     display: block;
-    padding: 5px;
-    font-size: 18px;
+    padding: 2px;
+    font-size: 13px;
     font-weight: lighter;
 }
 
@@ -347,12 +349,12 @@ ul.sidenav li a:hover:not(.active) {
     background-color: #E81B00;
     padding: 10px;
     color: #fff;
-    height: 250px;
+    height: auto;
 }
 
 .package .white-section{
     background-color: rgba(255,255,255, 0.5);
-    padding: 30px;
+    padding: 10px;
     color: #000;
 }
 
@@ -374,7 +376,7 @@ ul.sidenav li a:hover:not(.active) {
 
 .package li {
     color: #000;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .package p{
@@ -384,11 +386,11 @@ ul.sidenav li a:hover:not(.active) {
 
 
 .package button {
-    margin-top: 20px;
+    margin-top: 15px;
     border-radius: 0px;
     background-color: #E81B00;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 20px;
     font-weight: bold;
 }
 
@@ -424,13 +426,13 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 .contact {
-    padding: 50px 0 80px;
+    padding: 35px 0 0 35px;
     text-align: center;
     /*margin-top: 200px;*/
 }
 
 .contact p {
-    padding-bottom: 80px;
+    padding-bottom: 10px;
     color: #737373;
     z-index: 1500;
     
@@ -443,7 +445,7 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 .contact .input-group {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     
 }
 
@@ -504,7 +506,7 @@ ul.sidenav li a:hover:not(.active) {
 }
 */
 div.footer#footer {
-    padding: 20px;
+    padding: 15px;
     color: #cccccc !important;
     background-color: #222222 !important;
     padding-bottom: 0 !important;
@@ -512,14 +514,14 @@ div.footer#footer {
     
 }
 
-#footer-sec {
-    height: 239px !important;
-}
+/*#footer-sec {
+    height: 225px !important;
+}*/
 
 .footer #logo a{
         /*padding: 10px;*/
         font-size: 30px;
-        font-family: 'Quicksand', sans-serif;
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
         font-weight: bolder;
         font-style: italic;
         color: inherit;
@@ -528,7 +530,7 @@ div.footer#footer {
 
 
 .footer .social{
-    font-size: 30px;
+    font-size: 25px;
     height: 30px;
     width: 30px;
     text-align: center;
@@ -541,7 +543,7 @@ div.footer#footer {
 }
 
 .footer .contact, .footer .about a{
-    font-size: 15px;
+    font-size: 12px;
 
     text-align: center;
     padding: 2px;
@@ -556,7 +558,7 @@ div.footer#footer {
 
 .footer .copy {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .about-section {
@@ -574,7 +576,7 @@ div.footer#footer {
 
 .footer .btn {
     padding: 10px 5px 10px;
-    margin: -3px 0 0 5px;
+    /*margin: -3px 0 5px 5px;*/
     border-radius: 0;
     background-color: #E81B00;
     color: #fff !important;
@@ -614,6 +616,7 @@ div.footer#footer {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    z-index: 100;
 }
 #return-to-top i {
     color: #fff !important;
@@ -658,13 +661,22 @@ div.footer#footer {
 @media screen and (max-width: 950px) {
 
 #footer-sec {
-    height: 530px !important;
+    height: 505px !important;
+    margin-top: 10px;
+}
+
+#contact {
+    padding-top: 45px;
 }
 
 .header section h1 { 
     
     font-size: 30px;
     margin-top: 30px;
+}
+
+#pricing {
+    padding-top: 45px;
 }
 
     /*FOR MENU ICON ANIMATION*/
