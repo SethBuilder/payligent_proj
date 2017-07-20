@@ -351,6 +351,7 @@ ul.sidenav li a:hover:not(.active) {
     padding: 10px;
     color: #fff;
     height: auto;
+    margin-top: 15px;
 }
 
 .package .white-section{
