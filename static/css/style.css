@@ -655,6 +655,11 @@ div.footer#footer {
 
 @media screen and (max-width: 950px) {
 
+.header section h1 {
+    
+    font-size: 30px;
+    margin-top: 50px;
+}
 
 
     /*FOR MENU ICON ANIMATION*/
