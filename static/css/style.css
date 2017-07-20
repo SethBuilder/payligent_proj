@@ -289,7 +289,7 @@ ul.sidenav li a:hover:not(.active) {
 
 /*PRICING*/
 .pricing{
-    padding: 40px 0 30px;
+    padding: 40px;
 
     text-align: center;
     position: relative;
@@ -334,6 +334,7 @@ ul.sidenav li a:hover:not(.active) {
     /*border: 1px solid #ccc;*/
     border-radius: 5px;
     margin-top: 15px;
+    margin: auto;
 }
 
 
@@ -426,7 +427,7 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 .contact {
-    padding: 35px 0 0 35px;
+    padding: 30px;
     text-align: center;
     /*margin-top: 200px;*/
 }
@@ -445,7 +446,7 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 .contact .input-group {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     
 }
 
@@ -659,6 +660,8 @@ div.footer#footer {
 /*END CONTACT*/
 
 @media screen and (max-width: 950px) {
+
+
 
 #footer-sec {
     height: 505px !important;
