@@ -192,8 +192,6 @@ ul.sidenav li a:hover:not(.active) {
     padding: 60px 60px;
     text-align: center;
     background-color: #eeeeee;
-    border:none;
-    outline: none;
 }
 
 .features h2, .person h2{
@@ -420,7 +418,7 @@ ul.sidenav li a:hover:not(.active) {
 /*CONTACT*/
 
 #contact {
-    margin-top: 250px !important;
+    /*margin-top: 250px !important;*/
     border: none;
     outline: none !important;
 }
@@ -591,7 +589,9 @@ div.footer#footer {
 
 /*END FOOTER*/
 
-
+.fp-section {
+    height: auto !important;
+}
 
 /*UP ARROW*/
 
@@ -657,12 +657,15 @@ div.footer#footer {
 
 @media screen and (max-width: 950px) {
 
-.header section h1 {
-    
-    font-size: 30px;
-    margin-top: 50px;
+#footer-sec {
+    height: 530px !important;
 }
 
+.header section h1 { 
+    
+    font-size: 30px;
+    margin-top: 30px;
+}
 
     /*FOR MENU ICON ANIMATION*/
 
