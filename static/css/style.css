@@ -119,7 +119,6 @@ ul.sidenav li a:hover:not(.active) {
     /*margin-top: 55px;*/
     text-align: center;
     width: 100%;
-    
 }
 
 .header:before {
@@ -702,7 +701,15 @@ div.footer#footer {
 
 @media screen and (max-width: 950px) {
 
+.pricing, .features, .testi {
+     display: block;
+     height: auto;
+     padding: 20px;
+}
 
+.feature {
+    margin: 20px 0;
+}
 
 #footer-sec {
     height: 505px !important;
@@ -825,6 +832,10 @@ li div#nav-icon{
 
     .header section{
     margin-top: 15%;
+}
+
+.connect-section {
+    float: none !important;
 }
 
 }
