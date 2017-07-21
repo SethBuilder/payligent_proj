@@ -138,6 +138,7 @@ ul.sidenav li a:hover:not(.active) {
     background-attachment: fixed;
     background-position: center center;
     opacity: .4;
+    object-fit: cover;
 }
 
 .header section{
@@ -223,6 +224,7 @@ ul.sidenav li a:hover:not(.active) {
     background-repeat: no-repeat;
     background-position: center center;
     opacity: .8;
+    object-fit: cover;
 }
 
 
@@ -348,6 +350,7 @@ ul.sidenav li a:hover:not(.active) {
     background-repeat: no-repeat;
     background-position: center center;
     opacity: .5;
+    object-fit: cover;
 }
 
 .pricing p,
@@ -712,7 +715,7 @@ div.footer#footer {
 }
 
 #footer-sec {
-    height: 505px !important;
+    height: 500px !important;
     margin-top: 10px;
 }
 
