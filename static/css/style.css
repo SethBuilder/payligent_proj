@@ -5,9 +5,12 @@ html{
 	line-height: 1.1;
 	font-family: 'Lato', sans-serif !important;
 	font-weight: lighter;
-
+    padding: 0;
+    margin: 0;
 }
 body{
+    padding: 0;
+    margin: 0;
 	line-height: 1.1;
 	font-family: 'Lato', sans-serif !important;
 	font-weight: lighter;
@@ -190,20 +193,49 @@ ul.sidenav li a:hover:not(.active) {
 
 /*FEATURES*/
 .features, .testi{
-    padding: 60px 60px;
+    /*padding: 60px 60px;*/
     text-align: center;
-    background-color: #eeeeee;
+    /*background-color: #eeeeee;*/
     outline: none !important;
     width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
 }
 
-.features h2, .person h2{
+.features {
+    position: relative;
+}
+
+.features:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('/static/images/blue.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: .8;
+}
+
+
+.person h2, .features h2{
     margin: 20px 0 20px;
     color: #4c4c4c;
 }
 
 .features h1 {
     font-size: 45px;
+    color: #fff;
+    padding-bottom: 30px;
 }
 
 .features p{
@@ -223,7 +255,7 @@ ul.sidenav li a:hover:not(.active) {
     background-color: rgba(255,255,255, 1);
     overflow-wrap: break-word;
     color: white;
-    margin-top: 5px;
+    
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -236,6 +268,7 @@ ul.sidenav li a:hover:not(.active) {
     text-align: center;
     width: 100%;
     position: relative;
+
 }
 
 .testi object{
@@ -291,10 +324,12 @@ ul.sidenav li a:hover:not(.active) {
 
 /*PRICING*/
 .pricing{
-    padding: 40px;
-
+    /*padding: 40px;*/
+    height: 100vh;
     text-align: center;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .pricing:before {
@@ -313,7 +348,7 @@ ul.sidenav li a:hover:not(.active) {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    opacity: .4;
+    opacity: .5;
 }
 
 .pricing p,
@@ -322,7 +357,7 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 .pricing h1{
-    font-size: 30px;
+    font-size: 45px;
     color: #000;
 }
 
@@ -353,7 +388,7 @@ ul.sidenav li a:hover:not(.active) {
 
 .package .red-section{
     background-color: #E81B00;
-    padding: 10px;
+    padding: 5px;
     color: #fff;
     height: auto;
     margin-top: 15px;
@@ -361,7 +396,7 @@ ul.sidenav li a:hover:not(.active) {
 
 .package .white-section{
     background-color: rgba(255,255,255, 0.5);
-    padding: 10px;
+    padding: 5px;
     color: #000;
 }
 

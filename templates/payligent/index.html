@@ -5,8 +5,8 @@
 
 {% block body %}
 
-    <!-- <script type="text/javascript" src=" {% static 'js/jquery.fullPage.js' %} "></script> -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.js"></script>
+    <script type="text/javascript" src=" {% static 'js/jquery.fullPage.js' %} "></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.js"></script> -->
     <script type="text/javascript">
       $(document).ready(function() {
 	$('#fullpage').fullpage({
@@ -23,12 +23,12 @@
 
 		//Scrolling
 		css3: false,
-		scrollingSpeed: 400,
+		scrollingSpeed: 800,
 		autoScrolling: true,
-		fitToSection: false,
+		fitToSection: true,
 		fitToSectionDelay: 3000,
 		scrollBar: true,
-		easing: 'easeInOutCubic',
+		easing: 'easeInOutCirc',
 		easingcss3: 'ease',
 		loopBottom: false,
 		loopTop: false,
@@ -61,7 +61,7 @@
 		paddingTop: '0em',
 		paddingBottom: '0px',
 		fixedElements: '#header,',
-		responsiveWidth: 500,
+		responsiveWidth: 768,
 		responsiveHeight: 0,
 		responsiveSlides: false,
 		parallax: false,
@@ -118,7 +118,7 @@
 <div id="features" class="features">
 	<div class="container-fluid">
 		<div class="row">
-			<h1 class="wow fadeInUp">Features</h1>
+			<h1 class="wow fadeInUp">Making payments <strong>easy and flexible</strong></h1>
 			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='1.4s'>
 				<div class="feature">
 					<img src=" {% static 'images/uaeprivacy.png' %} ">
@@ -201,8 +201,8 @@
 			<div class="col-md-4 col-xs-12 wow flipInY" data-wow-delay='0.8s'>
 				<div class="package">
 					<section class="red-section">
-						<h1>Bronze</h1>
-						<h1>99 AED <span class="small-print">/month</span></h1>
+						<h2>Bronze</h2>
+						<h2>99 AED <span class="small-print">/month</span></h2>
 						
 						<p><b>0 AED </b><span class="small-print">/ transaction</span></p>
 						<p><b>0 AED</b> <span class="small-print">processing fees</span></p>
@@ -224,8 +224,8 @@
 			<div class="col-md-4 col-xs-12 wow flipInY" data-wow-delay='1.2s'>
 				<div class="package">
 					<section class="red-section">
-						<h1>Silver</h1>
-						<h1>39 AED <span class="small-print">/month</span></h1>
+						<h2>Silver</h2>
+						<h2>39 AED <span class="small-print">/month</span></h2>
 						
 						<p><b>2.49 AED </b><span class="small-print">/ transaction</span></p>
 						<p><b>.75 AED</b> <span class="small-print">processing fees</span></p>
@@ -245,8 +245,8 @@
 				<div class="package">
 
 					<section class="red-section">
-						<h1>Gold</h1>
-						<h1>29 AED <span class="small-print">/month</span></h1>
+						<h2>Gold</h2>
+						<h2>29 AED <span class="small-print">/month</span></h2>
 						
 						<p><b>2.29 AED </b><span class="small-print">/ transaction</span></p>
 						<p><b>.3 AED</b> <span class="small-print">processing fees</span></p>
