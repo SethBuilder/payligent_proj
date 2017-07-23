@@ -294,6 +294,11 @@
 
 <!-- CONTACT -->
 <div class="section">
+
+<div id="output" style="padding: 50px; text-align: center;" class="contact">
+	
+</div>
+
 <div id="contact" class="contact">
 
 <!--     <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
@@ -304,37 +309,141 @@
         <p class="lead wow fadeInUp" data-wow-delay='0.4s'>We'll respond to your query within one business day.</p>
         <div class="container">
         	<div class="row">
-        		<form action="mailto:moghrabi@gmail.com" method="post" enctype="text/plain">
+        		<form onsubmit="return false" method="post" id="contact_form" name="contact-form">
+        		{% csrf_token %}
         			<div class="col-md-6">
         				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.8s'>
         					<span class="input-group-addon" id="sizing-addon1">
         						<i class="fa fa-user" aria-hidden="true"></i>
         					</span>
-        					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Full Name" name="name">
+        					<input type="text" class="form-control" aria-describedby='sizing-addon1' placeholder="Full Name" name="fullname" id="fullname" required>
         				</div>
 
         				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='1.2s'>
         					<span class="input-group-addon" id="sizing-addon1">
         						<i class="fa fa-envelope" aria-hidden="true"></i>
         					</span>
-        					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Email Address" required name="email">
+        					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Email Address" required name="email" id="email">
         				</div>
 
         				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='1.6s'>
         					<span class="input-group-addon" id="sizing-addon1">
         						<i class="fa fa-phone" aria-hidden="true"></i>
         					</span>
-        					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Phone Number (optional)" name="phone">
+        					<input class="form-control" aria-describedby='sizing-addon1' placeholder="Phone Number (optional)" name="phone" id="phone">
         				</div>
         			</div>
 
         			<div class="col-md-6">
         				<div class="input-group wow fadeInUp" data-wow-delay='2s'>
-        					<textarea class="form-control" cols="80" rows="6" name="message" placeholder="Type here..." style="width:100%"></textarea>
+        					<textarea class="form-control" cols="80" rows="6" name="message" placeholder="Type here..." style="width:100%" id="message" required></textarea>
         				</div>
-        				<button class="btn btn-lg wow fadeInUp" data-wow-delay='2.4s'>Send Your Message</button>
+        				<button class="btn btn-lg wow fadeInUp" data-wow-delay='2.4s' id="contact_btn"data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Sending" >Send Your Message</button>
         			</div>
+        			
         		</form>
+
+        		<script type="text/javascript">
+
+        			//VALIDATE FORM
+					$(document).ready(function () {
+					    $('#contact_form').submit(function(e) {
+					    	e.preventDefault();
+					    }).validate({ 
+					        rules: {
+					            fullname: {
+					                required: true,
+					           
+					            },
+					            email: {
+					                required: true,
+					                email: true
+					            },
+					            message: {
+					                required: true,
+					                minlength: 5
+					            }
+					        },
+					        submitHandler: function (form) {
+
+					          var btn = $('#contact_btn');
+							  btn.button('loading');
+							    setTimeout(function() {
+							       btn.button('reset');
+							   }, 8000);
+
+					        $.ajax({
+        					type: 'POST',
+        					url: ' {% url "payligent:send_message" %} ',
+        					// data: form.serialize(),
+        					dataType: 'json',
+        					async: true,
+        					data: {
+        						csrfmiddlewaretoken: '{{csrf_token}}',
+        						fullname: $('#fullname').val(),
+        						email: $('#email').val(),
+        						phone: $('#phone').val(),
+        						message: $('#message').val()
+        					},
+
+        					success: function (json) {
+        						$('#contact').hide();
+        						$('#output').html(
+        							'<i class="fa fa-check" aria-hidden="true" id="check" style="border-radius:50%;font-size:80px;text-align:center;color:#E81B00"></i><br><p class="lead" style="font-size:40px;">We have received your message!</p>'
+        							).show();
+        					}
+        				});
+					         return false; // for demo
+                            } 
+					    });
+
+					});
+
+					//VALIDATE SUB FORM
+					$(document).ready(function () {
+					    $('#sub_form').submit(function(e) {
+					    	e.preventDefault();
+					    }).validate({ 
+					        rules: {
+					         
+					            email: {
+					                required: true,
+					                email: true
+					            },
+					            
+					        },
+					        submitHandler: function (form) {
+
+					        	var btn = $('#sub_btn');
+							  btn.button('loading');
+							    setTimeout(function() {
+							       btn.button('reset');
+							   }, 3000);
+
+					        $.ajax({
+        					type: 'POST',
+        					url: ' {% url "payligent:subscribe" %} ',
+        					// data: form.serialize(),
+        					dataType: 'json',
+        					async: true,
+        					data: {
+        						csrfmiddlewaretoken: '{{csrf_token}}',
+        						sub_email: $('#sub_email').val(),
+        					},
+
+        					success: function (json) {
+        						
+        						$('#sub_output').html(json.message);
+        						$("#sub_email").prop('disabled', true);
+        					}
+        				});
+
+					         return false; // for demo
+                            } 
+					    });
+
+					});
+        		</script>
         	</div>
         </div>
     </div>
@@ -373,8 +482,16 @@
 
 				<div class="connect-section pull-right">
 					<h4>Subscribe for Updates and Offers!</h4>
-					<input type="email" name="" placeholder="Your email address">
-					<button class="btn btn-success">Subscribe</button><br>
+
+
+					<form id="sub_form" onsubmit="return false" method="post" name="sub_form-form">
+					{% csrf_token %}
+						<input type="email" name="email" placeholder="Your email address" id="sub_email">
+						<button class="btn btn-success" type="submit" id="sub_btn">Subscribe</button><br>
+						<p id="sub_output" class="lead" style="color: white;"></p>
+					</form>
+
+
 					<a href=""><i class="social fa fa-cc-paypal" aria-hidden="true"></i></a>
 					<a href=""><i class="social fa fa-cc-visa" aria-hidden="true"></i></a>
 					<a href=""><i class="social fa fa-cc-mastercard" aria-hidden="true"></i></a>

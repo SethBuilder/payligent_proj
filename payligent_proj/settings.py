@@ -31,7 +31,12 @@ SECRET_KEY = 'ry1qp9w#^ex+0k*u7qt)qmo+2k#8t$(+4==x=b(&6!u44=hdmv'
 DEBUG = True
 
 
-
+# SECURE_SSL_REDIRECT = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sethmoghrabi@gmail.com'
+EMAIL_HOST_PASSWORD =  'Seeyou1later!'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 
