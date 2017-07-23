@@ -5,11 +5,11 @@
 
 {% block body %}
 
-    <!-- <script type="text/javascript" src=" {% static 'js/jquery.fullPage.js' %} "></script> -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-	$('#fullpage').fullpage({
+<!-- <script type="text/javascript" src=" {% static 'js/jquery.fullPage.js' %} "></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
 		lockAnchors: false,
@@ -82,8 +82,8 @@
 		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 	});
-});
-    </script>
+	});
+</script>
 
 
 
@@ -91,199 +91,177 @@
 
 
 <div class="section active">
-<div class="header" id="header">
-	<div class="container-fluid">
-		<div class="row">
+	<div class="header" id="header">
+		<div class="container-fluid">
+			<div class="row">
 
-			<section class="wow bounceInDown">
-				<h1>UAE'S AFFORDABLE ONLINE PAYMENT SOLUTION </h1>
-				<h3>Accept Payments Online Through your website, mobile app, email or social accounts.</h3>
-				<a href="#features"><button class="header-button">Learn More</button></a>
-				<a href="#pricing"><button class="header-button" id="black-button">Pick a Plan</button></a>
-			</section>
+				<section class="wow bounceInDown">
+					<h1>UAE'S AFFORDABLE ONLINE PAYMENT SOLUTION </h1>
+					<h3>Accept Payments Online Through your website, mobile app, email or social accounts.</h3>
+					<a href="#features"><button class="header-button">Learn More</button></a>
+					<a href="#pricing"><button class="header-button" id="black-button">Pick a Plan</button></a>
+				</section>
 
-			<object type="image/svg+xml" data=" {% static 'images/ae.svg' %} " class="wow bounceInUp">
-				Your browser does not support SVG
-			</object>
+				<object type="image/svg+xml" data=" {% static 'images/ae.svg' %} " class="wow bounceInUp">
+					Your browser does not support SVG
+				</object>
 
+			</div>
 		</div>
 	</div>
-</div>
 </div>
 <!-- END HEADER -->
 
 
 <!-- FEATURES -->
 <div class="section">
-<div id="features" class="features">
-	<div class="container-fluid">
-		<div class="row">
-			<h1 class="wow fadeInUp">Making payments <strong>easy and flexible</strong></h1>
-			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='1.4s'>
-				<div class="feature">
-					<img src=" {% static 'images/uaeprivacy.png' %} ">
-					<h2>UAE Privacy</h2> 
-					<p>Payligent is Based in the UAE following local privacy and quality standards.</p>
+	<div id="features" class="features">
+		<div class="container-fluid">
+			<div class="row">
+				<h1 class="wow fadeInUp">Making payments <strong>easy and flexible</strong></h1>
+				<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='1.4s'>
+					<div class="feature">
+						<img src=" {% static 'images/uaeprivacy.png' %} ">
+						<h2>UAE Privacy</h2> 
+						<p>Payligent is Based in the UAE following local privacy and quality standards.</p>
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='0.8s'>
-				<div class="feature">
-					<img src=" {% static 'images/affordable.png' %} ">
-					<h2>Affordable</h2> 
-					<p>We use special tech stack to cut cost. Only pay for what you need!</p>
+				<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='0.8s'>
+					<div class="feature">
+						<img src=" {% static 'images/affordable.png' %} ">
+						<h2>Affordable</h2> 
+						<p>We use special tech stack to cut cost. Only pay for what you need!</p>
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='0.4s'>
-				<div class="feature">
-					<img src=" {% static 'images/scale.png' %} ">
-					<h2>Scalable</h2> 
-					<p>It's super easy to scale up your platform with our straighforward plans.</p>
+				<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='0.4s'>
+					<div class="feature">
+						<img src=" {% static 'images/scale.png' %} ">
+						<h2>Scalable</h2> 
+						<p>It's super easy to scale up your platform with our straighforward plans.</p>
+					</div>
 				</div>
-			</div>
 
+			</div>
 		</div>
 	</div>
-</div>
 </div>
 <!-- END FEATURES -->
 
 
 <!-- TESTIMONIALS -->
 <div class="section">
-<div id="testi" class="testi">
-	<div class="container">
-		<div class="row">
-			<object type="image/svg+xml" data=" {% static 'images/ae_dots.svg' %} ">
-				Your browser does not support SVG
-			</object>
-			<h2 class="wow fadeInUp">We have some great clients <strong>Who love us</strong></h2>
+	<div id="testi" class="testi">
+		<div class="container">
+			<div class="row">
+				<object type="image/svg+xml" data=" {% static 'images/ae_dots.svg' %} ">
+					Your browser does not support SVG
+				</object>
+				<h2 class="wow fadeInUp">We have some great clients <strong>Who love us</strong></h2>
 
-			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='1.6s'>
-				<div class="person">
-					<img src=" {% static 'images/rania.jpg' %} " class="img-responsive img-circle">
-					<p><quote><i>Not only great pricing for a fully managed payment gateway solutions, but by far one of the best customer service / tech staff in the field!</i></quote></p>
-					<p class="name"><b>Rania T. </b> | Software Engineer</p>
+				<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='1.6s'>
+					<div class="person">
+						<img src=" {% static 'images/rania.jpg' %} " class="img-responsive img-circle">
+						<p><quote><i>Not only great pricing for a fully managed payment gateway solutions, but by far one of the best customer service / tech staff in the field!</i></quote></p>
+						<p class="name"><b>Rania T. </b> | Software Engineer</p>
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='1.2s'>
-				<div class="person">
-					<img src=" {% static 'images/fadi.jpg' %} " class="img-responsive img-circle">
-					<p><quote><i>We launched our music web app with zero users and now we're serving over 100k. Payligent has been with us in every step without a hitch!</i></quote></p>
-					<p class="name"><b>Fadi A. </b> | Internet Professional</p>
+				<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='1.2s'>
+					<div class="person">
+						<img src=" {% static 'images/fadi.jpg' %} " class="img-responsive img-circle">
+						<p><quote><i>We launched our music web app with zero users and now we're serving over 100k. Payligent has been with us in every step without a hitch!</i></quote></p>
+						<p class="name"><b>Fadi A. </b> | Internet Professional</p>
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='0.8s'>
-				<div class="person">
-					<img src=" {% static 'images/martin.jpg' %} " class="img-responsive img-circle">
-					<p><quote><i>We are operating a network of e-commerce services with high quality standards requirements, we’ve found Payligent to be our perfect partner.</i></quote></p>
-					<p class="name"><b>Martin P.</b> | Entrepreneur</p>
+				<div class="col-md-4 col-xs-12 wow fadeInLeft" data-wow-delay='0.8s'>
+					<div class="person">
+						<img src=" {% static 'images/martin.jpg' %} " class="img-responsive img-circle">
+						<p><quote><i>We are operating a network of e-commerce services with high quality standards requirements, we’ve found Payligent to be our perfect partner.</i></quote></p>
+						<p class="name"><b>Martin P.</b> | Entrepreneur</p>
+					</div>
 				</div>
+
 			</div>
-			
 		</div>
 	</div>
-</div>
 </div>
 <!-- END TESTIMOINIALS -->
 
 
 <!-- PRICING -->
 <div class="section">
-<div class="pricing" id="pricing">
-	<div class="container">
-		<div class="row">
-			<h1 class="wow fadeInUp">Try our payment gateway <b>With featherlight price</b> </h1>
-			<p class="lead wow fadeInUp" data-wow-delay='0.4s'>All of our paid plans come with a no-quibble 30-day money-back guarantee</p>
-			<div class="col-md-4 col-xs-12 wow flipInY" data-wow-delay='0.8s'>
-				<div class="package">
-					<section class="red-section">
-						<h2>Bronze</h2>
-						<h2>99 AED <span class="small-print">/month</span></h2>
-						
-						<p><b>0 AED </b><span class="small-print">/ transaction</span></p>
-						<p><b>0 AED</b> <span class="small-print">processing fees</span></p>
-					</section>
-					<section class="white-section">
+	<div class="pricing" id="pricing">
+		<div class="container">
+			<div class="row">
+				<h1 class="wow fadeInUp">Try our payment gateway <b>With featherlight price</b> </h1>
+				<p class="lead wow fadeInUp" data-wow-delay='0.4s'>All of our paid plans come with a no-quibble 30-day money-back guarantee</p>
+				<div class="col-md-4 col-xs-12 wow flipInY" data-wow-delay='0.8s'>
+					<div class="package">
+						<section class="red-section">
+							<h2>Bronze</h2>
+							<h2>99 AED <span class="small-print">/month</span></h2>
 
-						<li>0 – 20K AED Monthly Volume</li>
-						<li>30 – day money-back guarantee</li>
-						<li>No security deposit</li>
-						<li>Online Support</li>
-						
-						
-						<button class="btn btn-success">Get Started</button>
-					</section>
+							<p><b>0 AED </b><span class="small-print">/ transaction</span></p>
+							<p><b>0 AED</b> <span class="small-print">processing fees</span></p>
+						</section>
+						<section class="white-section">
 
+							<li>0 – 20K AED Monthly Volume</li>
+							<li>30 – day money-back guarantee</li>
+							<li>No security deposit</li>
+							<li>Online Support</li>
+
+
+							<button class="btn btn-success">Get Started</button>
+						</section>
+
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-xs-12 wow flipInY" data-wow-delay='1.2s'>
-				<div class="package">
-					<section class="red-section">
-						<h2>Silver</h2>
-						<h2>39 AED <span class="small-print">/month</span></h2>
-						
-						<p><b>2.49 AED </b><span class="small-print">/ transaction</span></p>
-						<p><b>.75 AED</b> <span class="small-print">processing fees</span></p>
-					</section>
-					<section class="white-section">
-						<li>20k – 50K AED Monthly Volume</li>
-						<li>30 – day money-back guarantee</li>
-						<li>No security deposit</li>
-						<li>Online Support</li>
-						<button class="btn btn-success">Get Started</button>
-					</section>
+				<div class="col-md-4 col-xs-12 wow flipInY" data-wow-delay='1.2s'>
+					<div class="package">
+						<section class="red-section">
+							<h2>Silver</h2>
+							<h2>39 AED <span class="small-print">/month</span></h2>
 
+							<p><b>2.49 AED </b><span class="small-print">/ transaction</span></p>
+							<p><b>.75 AED</b> <span class="small-print">processing fees</span></p>
+						</section>
+						<section class="white-section">
+							<li>20k – 50K AED Monthly Volume</li>
+							<li>30 – day money-back guarantee</li>
+							<li>No security deposit</li>
+							<li>Online Support</li>
+							<button class="btn btn-success">Get Started</button>
+						</section>
+
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-xs-12 wow flipInY" data-wow-delay='1.6s'>
-				<div class="package">
+				<div class="col-md-4 col-xs-12 wow flipInY" data-wow-delay='1.6s'>
+					<div class="package">
 
-					<section class="red-section">
-						<h2>Gold</h2>
-						<h2>29 AED <span class="small-print">/month</span></h2>
-						
-						<p><b>2.29 AED </b><span class="small-print">/ transaction</span></p>
-						<p><b>.3 AED</b> <span class="small-print">processing fees</span></p>
-					</section>
+						<section class="red-section">
+							<h2>Gold</h2>
+							<h2>29 AED <span class="small-print">/month</span></h2>
 
-					<section class="white-section">
-						<li>50k – 200K AED Monthly Volume</li>
-						<li>30 – day money-back guarantee</li>
-						<li>No security deposit</li>
-						<li>Online Support</li>
-						<button class="btn btn-success">Get Started</button>
-					</section>
+							<p><b>2.29 AED </b><span class="small-print">/ transaction</span></p>
+							<p><b>.3 AED</b> <span class="small-print">processing fees</span></p>
+						</section>
 
+						<section class="white-section">
+							<li>50k – 200K AED Monthly Volume</li>
+							<li>30 – day money-back guarantee</li>
+							<li>No security deposit</li>
+							<li>Online Support</li>
+							<button class="btn btn-success">Get Started</button>
+						</section>
+
+					</div>
 				</div>
-			</div>
-
-			<!-- <div class="col-md-3 col-xs-12">
-				<div class="package">
-
-					<section class="red-section">
-						<h1>Platinum</h1>
-						<h1>9.99 AED <span class="small-print">/month</span></h1>
-						
-						<p><b>2.60 AED </b><span class="small-print">/ transaction</span></p>
-						<p><b>.75 AED</b> <span class="small-print">processing fees</span></p>
-					</section>
-					<section class="white-section">
-						<li>100 Users</li>
-						<li>SSL certificate</li>
-						<li>Online Support</li>
-						<li>300GB Disk Space</li>
-						<li>100 Email addresses</li>
-						<button class="btn btn-success">Get Started</button>
-					</section>
-
-				</div>
-			</div> -->
 		</div>
 	</div>						
 </div>
@@ -295,11 +273,11 @@
 <!-- CONTACT -->
 <div class="section">
 
-<div id="output" style="padding: 50px; text-align: center;" class="contact">
-	
-</div>
+	<div id="output" style="padding: 50px; text-align: center;" class="contact">
 
-<div id="contact" class="contact">
+	</div>
+
+	<div id="contact" class="contact">
 
 <!--     <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
         <source src=" {% static 'videos/typing.mp4' %} " type="video/mp4">
@@ -310,7 +288,7 @@
         <div class="container">
         	<div class="row">
         		<form onsubmit="return false" method="post" id="contact_form" name="contact-form">
-        		{% csrf_token %}
+        			{% csrf_token %}
         			<div class="col-md-6">
         				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.8s'>
         					<span class="input-group-addon" id="sizing-addon1">
@@ -346,35 +324,35 @@
         		<script type="text/javascript">
 
         			//VALIDATE FORM
-					$(document).ready(function () {
-					    $('#contact_form').submit(function(e) {
-					    	e.preventDefault();
-					    }).validate({ 
-					        rules: {
-					            fullname: {
-					                required: true,
-					           
-					            },
-					            email: {
-					                required: true,
-					                email: true
-					            },
-					            message: {
-					                required: true,
-					                minlength: 5
-					            }
-					        },
-					        submitHandler: function (form) {
+        			$(document).ready(function () {
+        				$('#contact_form').submit(function(e) {
+        					e.preventDefault();
+        				}).validate({ 
+        					rules: {
+        						fullname: {
+        							required: true,
 
-					          var btn = $('#contact_btn');
-							  btn.button('loading');
-							    setTimeout(function() {
-							       btn.button('reset');
-							   }, 8000);
+        						},
+        						email: {
+        							required: true,
+        							email: true
+        						},
+        						message: {
+        							required: true,
+        							minlength: 5
+        						}
+        					},
+        					submitHandler: function (form) {
 
-					        $.ajax({
-        					type: 'POST',
-        					url: ' {% url "payligent:send_message" %} ',
+        						var btn = $('#contact_btn');
+        						btn.button('loading');
+        						setTimeout(function() {
+        							btn.button('reset');
+        						}, 8000);
+
+        						$.ajax({
+        							type: 'POST',
+        							url: ' {% url "payligent:send_message" %} ',
         					// data: form.serialize(),
         					dataType: 'json',
         					async: true,
@@ -394,35 +372,35 @@
         					}
         				});
 					         return false; // for demo
-                            } 
-					    });
+					     } 
+					 });
 
-					});
+        			});
 
 					//VALIDATE SUB FORM
 					$(document).ready(function () {
-					    $('#sub_form').submit(function(e) {
-					    	e.preventDefault();
-					    }).validate({ 
-					        rules: {
-					         
-					            email: {
-					                required: true,
-					                email: true
-					            },
-					            
-					        },
-					        submitHandler: function (form) {
+						$('#sub_form').submit(function(e) {
+							e.preventDefault();
+						}).validate({ 
+							rules: {
 
-					        	var btn = $('#sub_btn');
-							  btn.button('loading');
-							    setTimeout(function() {
-							       btn.button('reset');
-							   }, 3000);
+								email: {
+									required: true,
+									email: true
+								},
 
-					        $.ajax({
-        					type: 'POST',
-        					url: ' {% url "payligent:subscribe" %} ',
+							},
+							submitHandler: function (form) {
+
+								var btn = $('#sub_btn');
+								btn.button('loading');
+								setTimeout(function() {
+									btn.button('reset');
+								}, 3000);
+
+								$.ajax({
+									type: 'POST',
+									url: ' {% url "payligent:subscribe" %} ',
         					// data: form.serialize(),
         					dataType: 'json',
         					async: true,
@@ -439,81 +417,78 @@
         				});
 
 					         return false; // for demo
-                            } 
-					    });
+					     } 
+					 });
 
 					});
-        		</script>
-        	</div>
-        </div>
-    </div>
-    
-<!-- END CONTACT -->
-
-<div id="footer-sec">
-<div class="footer" id="footer">
-	<div class="container">
-		<div class="row">
-
-			<h4 id="logo" class="col-md-2"><a href="#">Payligent</a></h4>
-
-			<div class="col-md-3">
-
-				<h4>Contact Info</h4>
-				<p><i class="contact fa fa-home" aria-hidden="true"></i>Building No.3,</p>
-				<p>Dubai Media City - Dubai - UAE </p>
-				<p><i class="contact fa fa-envelope" aria-hidden="true"></i>Hello@payligent.com</p>
-				<p><i class="contact fa fa-phone" aria-hidden="true"></i>0788877878</p>
-				<p><i class="contact fa fa-globe" aria-hidden="true"></i>www.payligent.com</p>
-
+				</script>
 			</div>
-
-			<div class="col-md-3">
-
-				<div class="about-section">
-					<h4>About</h4>
-					<p class="about"><a href="">About Us</a></p>
-					<p class="about"><a href="">Privacy</a></p>
-					<p class="about"><a href="">Terms and Conditions</a></p>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-
-				<div class="connect-section pull-right">
-					<h4>Subscribe for Updates and Offers!</h4>
-
-
-					<form id="sub_form" onsubmit="return false" method="post" name="sub_form-form">
-					{% csrf_token %}
-						<input type="email" name="email" placeholder="Your email address" id="sub_email">
-						<button class="btn btn-success" type="submit" id="sub_btn">Subscribe</button><br>
-						<p id="sub_output" class="lead" style="color: white;"></p>
-					</form>
-
-
-					<a href=""><i class="social fa fa-cc-paypal" aria-hidden="true"></i></a>
-					<a href=""><i class="social fa fa-cc-visa" aria-hidden="true"></i></a>
-					<a href=""><i class="social fa fa-cc-mastercard" aria-hidden="true"></i></a>
-					<a href=""><i class="social fa fa-cc-amex" aria-hidden="true"></i></a>
-				</div>
-				
-			</div>
-
 		</div>
+	</div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p class="copy">© 2017 Payligent  . All rights reserved.</p>
-				<!-- <a href=""> <img src=" {% static 'images/pci.png' %} " class="pull-right"> </a> -->
+	<!-- END CONTACT -->
+
+	<div id="footer-sec">
+		<div class="footer" id="footer">
+			<div class="container">
+				<div class="row">
+
+					<h4 id="logo" class="col-md-2"><a href="#">Payligent</a></h4>
+
+					<div class="col-md-3">
+
+						<h4>Contact Info</h4>
+						<p><i class="contact fa fa-home" aria-hidden="true"></i>Building No.3,</p>
+						<p>Dubai Media City - Dubai - UAE </p>
+						<p><i class="contact fa fa-envelope" aria-hidden="true"></i>Hello@payligent.com</p>
+						<p><i class="contact fa fa-phone" aria-hidden="true"></i>0788877878</p>
+						<p><i class="contact fa fa-globe" aria-hidden="true"></i>www.payligent.com</p>
+
+					</div>
+
+					<div class="col-md-3">
+
+						<div class="about-section">
+							<h4>About</h4>
+							<p class="about"><a href="">About Us</a></p>
+							<p class="about"><a href="">Privacy</a></p>
+							<p class="about"><a href="">Terms and Conditions</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+
+						<div class="connect-section pull-right">
+							<h4>Subscribe for Updates and Offers!</h4>
+
+
+							<form id="sub_form" onsubmit="return false" method="post" name="sub_form-form">
+								{% csrf_token %}
+								<input type="email" name="email" placeholder="Your email address" id="sub_email">
+								<button class="btn btn-success" type="submit" id="sub_btn">Subscribe</button><br>
+								<p id="sub_output" class="lead" style="color: white;"></p>
+							</form>
+
+
+							<a href=""><i class="social fa fa-cc-paypal" aria-hidden="true"></i></a>
+							<a href=""><i class="social fa fa-cc-visa" aria-hidden="true"></i></a>
+							<a href=""><i class="social fa fa-cc-mastercard" aria-hidden="true"></i></a>
+							<a href=""><i class="social fa fa-cc-amex" aria-hidden="true"></i></a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copy">© 2017 Payligent  . All rights reserved.</p>
+						<!-- <a href=""> <img src=" {% static 'images/pci.png' %} " class="pull-right"> </a> -->
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-</div>
-</div>
-
-
-
 
 {% endblock %}
