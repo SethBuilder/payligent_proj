@@ -7,89 +7,8 @@
 
 <!-- <script type="text/javascript" src=" {% static 'js/jquery.fullPage.js' %} "></script> -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#fullpage').fullpage({
-		//Navigation
-		menu: '#menu',
-		lockAnchors: false,
-		
-		navigation: false,
-		navigationPosition: 'right',
-		navigationTooltips: ['firstSlide', 'secondSlide'],
-		showActiveTooltip: false,
-		slidesNavigation: false,
-		slidesNavPosition: 'bottom',
-
-		//Scrolling
-		css3: false,
-		scrollingSpeed: 800,
-		autoScrolling: true,
-		fitToSection: true,
-		fitToSectionDelay: 3000,
-		scrollBar: true,
-		easing: 'easeInOutCirc',
-		easingcss3: 'ease',
-		loopBottom: false,
-		loopTop: false,
-		loopHorizontal: true,
-		continuousVertical: false,
-		continuousHorizontal: false,
-		scrollHorizontally: false,
-		interlockedSlides: false,
-		dragAndMove: false,
-		offsetSections: false,
-		resetSliders: false,
-		fadingEffect: false,
-		normalScrollElements: '#element1, .element2',
-		scrollOverflow: false,
-		scrollOverflowReset: true,
-		scrollOverflowOptions: null,
-		touchSensitivity: 15,
-		normalScrollElementTouchThreshold: 5,
-		bigSectionsDestination: null,
-
-		//Accessibility
-		keyboardScrolling: true,
-		animateAnchor: true,
-		recordHistory: true,
-
-		//Design
-		controlArrows: true,
-		verticalCentered: false,
-		// sectionsColor : ['#ccc', '#fff'],
-		paddingTop: '0em',
-		paddingBottom: '0px',
-		fixedElements: '#header,',
-		responsiveWidth: 768,
-		responsiveHeight: 0,
-		responsiveSlides: false,
-		parallax: false,
-		parallaxOptions: {type: 'reveal', percentage: 100, property: 'translate'},
-
-		//Custom selectors
-		sectionSelector: '.section',
-		slideSelector: '.slide',
-
-		lazyLoading: true,
-
-		//events
-		onLeave: function(index, nextIndex, direction){},
-		afterLoad: function(anchorLink, index){},
-		afterRender: function(){},
-		afterResize: function(){},
-		afterResponsive: function(isResponsive){},
-		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-	});
-	});
-</script>
-
-
 
 <!-- HEADER -->
-
-
 <div class="section active">
 	<div class="header" id="header">
 		<div class="container-fluid">
@@ -183,7 +102,6 @@
 						<p class="name"><b>Martin P.</b> | Entrepreneur</p>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -272,17 +190,8 @@
 
 <!-- CONTACT -->
 <div class="section">
-
-	<div id="output" style="padding: 50px; text-align: center;" class="contact">
-
-	</div>
-
+	<div id="output" style="padding: 50px; text-align: center;" class="contact"></div>
 	<div id="contact" class="contact">
-
-<!--     <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-        <source src=" {% static 'videos/typing.mp4' %} " type="video/mp4">
-        </video> -->
-
         <h2 class="wow fadeInUp">Contact us!</h2>
         <p class="lead wow fadeInUp" data-wow-delay='0.4s'>We'll respond to your query within one business day.</p>
         <div class="container">
@@ -320,114 +229,11 @@
         			</div>
         			
         		</form>
-
-        		<script type="text/javascript">
-
-        			//VALIDATE FORM
-        			$(document).ready(function () {
-        				$('#contact_form').submit(function(e) {
-        					e.preventDefault();
-        				}).validate({ 
-        					rules: {
-        						fullname: {
-        							required: true,
-
-        						},
-        						email: {
-        							required: true,
-        							email: true
-        						},
-        						message: {
-        							required: true,
-        							minlength: 5
-        						}
-        					},
-        					submitHandler: function (form) {
-
-        						var btn = $('#contact_btn');
-        						btn.button('loading');
-        						setTimeout(function() {
-        							btn.button('reset');
-        						}, 8000);
-
-        						$.ajax({
-        							type: 'POST',
-        							url: ' {% url "payligent:send_message" %} ',
-        					// data: form.serialize(),
-        					dataType: 'json',
-        					async: true,
-        					data: {
-        						csrfmiddlewaretoken: '{{csrf_token}}',
-        						fullname: $('#fullname').val(),
-        						email: $('#email').val(),
-        						phone: $('#phone').val(),
-        						message: $('#message').val()
-        					},
-
-        					success: function (json) {
-        						$('#contact').hide();
-        						$('#output').html(
-        							'<i class="fa fa-check" aria-hidden="true" id="check" style="border-radius:50%;font-size:80px;text-align:center;color:#E81B00"></i><br><p class="lead" style="font-size:40px;">We have received your message!</p>'
-        							).show();
-        					}
-        				});
-					         return false; // for demo
-					     } 
-					 });
-
-        			});
-
-					//VALIDATE SUB FORM
-					$(document).ready(function () {
-						$('#sub_form').submit(function(e) {
-							e.preventDefault();
-						}).validate({ 
-							rules: {
-
-								email: {
-									required: true,
-									email: true
-								},
-
-							},
-							submitHandler: function (form) {
-
-								var btn = $('#sub_btn');
-								btn.button('loading');
-								setTimeout(function() {
-									btn.button('reset');
-								}, 3000);
-
-								$.ajax({
-									type: 'POST',
-									url: ' {% url "payligent:subscribe" %} ',
-        					// data: form.serialize(),
-        					dataType: 'json',
-        					async: true,
-        					data: {
-        						csrfmiddlewaretoken: '{{csrf_token}}',
-        						sub_email: $('#sub_email').val(),
-        					},
-
-        					success: function (json) {
-        						
-        						$('#sub_output').html(json.message);
-        						$("#sub_email").prop('disabled', true);
-        					}
-        				});
-
-					         return false; // for demo
-					     } 
-					 });
-
-					});
-				</script>
 			</div>
 		</div>
 	</div>
 
 	<!-- END CONTACT -->
-
 	<div id="footer-sec">
 		<div class="footer" id="footer">
 			<div class="container">
@@ -436,14 +242,12 @@
 					<h4 id="logo" class="col-md-2"><a href="#">Payligent</a></h4>
 
 					<div class="col-md-3">
-
 						<h4>Contact Info</h4>
 						<p><i class="contact fa fa-home" aria-hidden="true"></i>Building No.3,</p>
 						<p>Dubai Media City - Dubai - UAE </p>
 						<p><i class="contact fa fa-envelope" aria-hidden="true"></i>Hello@payligent.com</p>
 						<p><i class="contact fa fa-phone" aria-hidden="true"></i>0788877878</p>
 						<p><i class="contact fa fa-globe" aria-hidden="true"></i>www.payligent.com</p>
-
 					</div>
 
 					<div class="col-md-3">
@@ -490,5 +294,101 @@
 		</div>
 	</div>
 </div>
+
+
+<script type="text/javascript">
+	      // validattion code
+      $('#contact_form').submit(function(e) {
+                  e.preventDefault();
+                }).validate({ 
+                  rules: {
+                    fullname: {
+                      required: true,
+
+                    },
+                    email: {
+                      required: true,
+                      email: true
+                    },
+                    message: {
+                      required: true,
+                      minlength: 5
+                    }
+                  },
+                  submitHandler: function (form) {
+
+                    var btn = $('#contact_btn');
+                    btn.button('loading');
+                    setTimeout(function() {
+                      btn.button('reset');
+                    }, 8000);
+
+                    $.ajax({
+                      type: 'POST',
+                      url: ' {% url "payligent:send_message" %} ',
+                  // data: form.serialize(),
+                  dataType: 'json',
+                  async: true,
+                  data: {
+                    csrfmiddlewaretoken: '{{csrf_token}}',
+                    fullname: $('#fullname').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    message: $('#message').val()
+                  },
+
+                  success: function (json) {
+                    $('#contact').hide();
+                    $('#output').html(
+                      '<i class="fa fa-check" aria-hidden="true" id="check" style="border-radius:50%;font-size:80px;text-align:center;color:#E81B00"></i><br><p class="lead" style="font-size:40px;">We have received your message!</p>'
+                      ).show();
+                  }
+                });
+                   return false; // for demo
+               } 
+           });
+
+                $('#sub_form').submit(function(e) {
+              e.preventDefault();
+            }).validate({ 
+              rules: {
+
+                email: {
+                  required: true,
+                  email: true
+                },
+
+              },
+              submitHandler: function (form) {
+
+                var btn = $('#sub_btn');
+                btn.button('loading');
+                setTimeout(function() {
+                  btn.button('reset');
+                }, 3000);
+
+                $.ajax({
+                  type: 'POST',
+                  url: ' {% url "payligent:subscribe" %} ',
+                  // data: form.serialize(),
+                  dataType: 'json',
+                  async: true,
+                  data: {
+                    csrfmiddlewaretoken: '{{csrf_token}}',
+                    sub_email: $('#sub_email').val(),
+                  },
+
+                  success: function (json) {
+                    
+                    $('#sub_output').html(json.message);
+                    $("#sub_email").prop('disabled', true);
+                  }
+                });
+
+                   return false; // for demo
+               } 
+           });
+</script>
+
 
 {% endblock %}

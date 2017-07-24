@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 html{
-	
 	line-height: 1.1;
 	font-family: 'Lato', sans-serif !important;
 	font-weight: lighter;
-    padding: 0;
-    margin: 0;
-}
-body{
     /*padding: 0;
     margin: 0;*/
+}
+body{
+    padding: 0;
+    margin: 0;
 	line-height: 1.1;
 	font-family: 'Lato', sans-serif !important;
 	font-weight: lighter;
-   
 }
 
 ::selection {
@@ -27,8 +25,6 @@ border:none;
 font-family:  Georgia, "Times New Roman", Times, serif;
 margin-bottom:-30px;
 quotes: "\201C""\201D""\2018""\2019";
-
-
 }
 
 
@@ -63,7 +59,6 @@ ul.sidenav li a{
     color: white;
     padding: 8px 16px;
     text-decoration: none;
-
 }
 
 ul.sidenav li.icon{
@@ -75,43 +70,38 @@ ul.sidenav li a:hover:not(.active) {
     color: #CCC;
 }
 
-
 .active {
     background-color: transparent;
 }
 
+ul.sidenav{
+    width:100%;
+    height: auto;
+    position: fixed;
+     transition: .2s;
+}
+
+ul.sidenav li:not(:first-child) a{
+    padding: 20px;
+    font-size: 15px;
+}
+
+ul.sidenav li:not(:first-child){
+    float: right;
+}
+
+ul.sidenav li#logo a{
+    float: left;
+    padding: 6px;
+    font-size: 35px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    text-transform: uppercase;
+}
 
 
-    ul.sidenav{
-        width:100%;
-        height: auto;
-        position: fixed;
-         transition: .2s;
-    }
-
-    ul.sidenav li:not(:first-child) a{
-        padding: 20px;
-        font-size: 15px;
-    }
-
-    ul.sidenav li:not(:first-child){
-        float: right;
-    }
-
-    ul.sidenav li#logo a{
-        float: left;
-        padding: 6px;
-        font-size: 35px;
-        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-        font-weight: bolder;
-        font-style: italic;
-        text-transform: uppercase;
-    }
-
-
-    div.content {margin-left: 0;}
-
-
+div.content {margin-left: 0;}
 
 /*HEADER*/
 
@@ -256,10 +246,8 @@ ul.sidenav li a:hover:not(.active) {
     background-color: rgba(255,255,255, 1);
     overflow-wrap: break-word;
     color: white;
-    
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 /*END FEATURES*/
 
@@ -269,7 +257,6 @@ ul.sidenav li a:hover:not(.active) {
     text-align: center;
     width: 100%;
     position: relative;
-
 }
 
 .testi object{
@@ -279,10 +266,10 @@ ul.sidenav li a:hover:not(.active) {
     margin-top: 60px;
     opacity: .95;
     z-index: 0;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  opacity: .4;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    opacity: .4;
 }
 
 
@@ -453,13 +440,7 @@ ul.sidenav li a:hover:not(.active) {
         margin-left: 35px;
     }
 }
-
-
-
-
 /*END PRICING*/
-
-
 
 /*CONTACT*/
 
@@ -470,7 +451,7 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 .contact {
-    padding: 30px;
+    padding: 15px;
     text-align: center;
     /*margin-top: 200px;*/
 }
@@ -479,23 +460,19 @@ ul.sidenav li a:hover:not(.active) {
     padding-bottom: 10px;
     color: #737373;
     z-index: 1500;
-    
 }
 
 .contact h2 {
     color: #4c4c4c;
     margin: 20px 0 20px;
-    
 }
 
 .contact .input-group {
     margin-bottom: 25px;
-    
 }
 
 .contact .form-control {
     border-radius: 0 !important;
-    
 }
 
 .contact span {
@@ -515,30 +492,6 @@ ul.sidenav li a:hover:not(.active) {
     color: #fff !important;
 }
 
-/*.fullscreen-bg {
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-
-  
-}
-
-
-.fullscreen-bg__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .5;
-    
-    
-}*/
-
-
 /*END CONTACT*/
 
 /*MESSAGE SENT SUCCESSFULLY*/
@@ -554,6 +507,7 @@ ul.sidenav li a:hover:not(.active) {
 
 /*END MESSAGE SENT SUCCESSFULLY*/
 
+
 /*FOOTER*/
 
 /*.fp-tableCell {
@@ -566,21 +520,16 @@ div.footer#footer {
     background-color: #222222 !important;
     padding-bottom: 0 !important;
     margin: 0 !important;
-    
 }
 
-/*#footer-sec {
-    height: 225px !important;
-}*/
-
 .footer #logo a{
-        /*padding: 10px;*/
-        font-size: 30px;
-        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-        font-weight: bolder;
-        font-style: italic;
-        color: inherit;
-        text-decoration: none;
+    /*padding: 10px;*/
+    font-size: 30px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    color: inherit;
+    text-decoration: none;
     }
 
 
@@ -599,7 +548,6 @@ div.footer#footer {
 
 .footer .contact, .footer .about a{
     font-size: 12px;
-
     text-align: center;
     padding: 2px;
     color: #cccccc !important;
@@ -607,17 +555,9 @@ div.footer#footer {
     margin-right: 5px;
 }
 
-.footer .about {
-    /*float: left;*/
-}
-
 .footer .copy {
     text-align: center;
     padding-top: 15px;
-}
-
-.about-section {
-    /*margin-top: 80px;*/
 }
 
 .footer input {
@@ -643,12 +583,12 @@ div.footer#footer {
     color: #fff !important;
 }
 
-
-/*END FOOTER*/
-
 .fp-section {
     height: auto !important;
 }
+
+/*END FOOTER*/
+
 
 /*UP ARROW*/
 
@@ -673,6 +613,7 @@ div.footer#footer {
     transition: all 0.3s ease;
     z-index: 100;
 }
+
 #return-to-top i {
     color: #fff !important;
     margin: 0;
@@ -687,29 +628,15 @@ div.footer#footer {
     transition: all 0.3s ease;
     z-index: 100;
 }
+
 #return-to-top:hover {
     background: rgba(0, 0, 0, 0.9);
 }
+
 #return-to-top:hover i {
     color: #fff;
     top: 5px;
 }
-
-/*END UP ARROW*/
-@media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    width: auto;
-    height: 100%;
-  }
-}
-
 
 /*END UP ARROW*/
 
@@ -719,32 +646,31 @@ div.footer#footer {
      display: block;
      height: auto;
      padding: 20px;
-}
+    }
 
 .feature {
     margin: 20px 0;
-}
+    }
 
 #footer-sec {
     height: 500px !important;
     margin-top: 10px;
-}
+    }
 
 #contact {
     padding-top: 45px;
-}
+    }
 
 .header section h1 { 
-    
     font-size: 30px;
     margin-top: 30px;
-}
+    }
 
 #pricing {
     padding-top: 45px;
-}
+    }
 
-    /*FOR MENU ICON ANIMATION*/
+/*FOR MENU ICON ANIMATION*/
 
 li div#nav-icon{
   width: 60px;
@@ -760,7 +686,7 @@ li div#nav-icon{
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-}
+    }
 
 #nav-icon span {
   display: block;
@@ -779,19 +705,19 @@ li div#nav-icon{
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
-}
+    }
 
 #nav-icon span:nth-child(1) {
   top: 0px;
-}
+    }
 
 #nav-icon span:nth-child(2) {
   top: 18px;
-}
+    }
 
 #nav-icon span:nth-child(3) {
   top: 36px;
-}
+    }
 
 #nav-icon.open span:nth-child(1) {
   top: 18px;
@@ -799,12 +725,12 @@ li div#nav-icon{
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
-}
+    }
 
 #nav-icon.open span:nth-child(2) {
   opacity: 0;
   left: -60px;
-}
+    }
 
 #nav-icon.open span:nth-child(3) {
   top: 18px;
@@ -812,44 +738,41 @@ li div#nav-icon{
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
-}
+    }  
 
 /*END OF ICON ANIMATION*/
   
 
-    ul.sidenav li:not(:first-child){
-        display: none;
+ul.sidenav li:not(:first-child){
+    display: none;
     }
 
-    
-
-    ul.sidenav li.icon{
+ul.sidenav li.icon{
     display: block;
     float: right;
     padding: 0;
-    
     }
 
-    ul.sidenav li.icon a{
-        padding: 0;
+ul.sidenav li.icon a{
+    padding: 0;
     }
 
-   /* ul.sidenav.responsive{position: relative;}*/
-    ul.sidenav.responsive li.icon{position: absolute;right: 0;top:0;}
-    ul.sidenav.responsive li{ display: block;float: none;}
-    ul.sidenav.responsive li a{display: block; text-align: center;}
-    
+/* ul.sidenav.responsive{position: relative;}*/
+ul.sidenav.responsive li.icon{position: absolute;right: 0;top:0;}
+ul.sidenav.responsive li{ display: block;float: none;}
+ul.sidenav.responsive li a{display: block; text-align: center;}
 
-    .header-button{
+
+.header-button{
     margin: 10px;
-}
+    }
 
-    .header section{
+.header section{
     margin-top: 15%;
-}
+    }
 
 .connect-section {
     float: none !important;
-}
+    }
 
-}
+}/*END OF MEDIA QUERY*/

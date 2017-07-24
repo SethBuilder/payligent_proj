@@ -3,11 +3,12 @@ from django.http import HttpResponse, HttpResponseRedirect
 import json
 from django.core.mail import send_mail, BadHeaderError
 
+# INDEX PAGE
 def index(request):
 	return render(request, 'payligent/index.html', {})
 
 
-
+# EMAIL SENDING FUNCTION
 def send_me_email(subject, message, to_email):
 	"""Used so I receive emails when a new user signs up or does other things like send feedback"""
 	try:
@@ -15,8 +16,9 @@ def send_me_email(subject, message, to_email):
 	except BadHeaderError:
 		return HttpResponse('Invalid header found.')
 
-
+# contact form view
 def send_message(request):
+	""" sends data filled in the contact form via ajax  """
 	fullname = request.POST.get('fullname','')
 	email = request.POST.get('email','')
 	phone = request.POST.get('phone','')
@@ -26,12 +28,14 @@ def send_message(request):
 	response_data = {}
 	# try:
 	response_data['message'] = "We have received your message!"
-	send_me_email("New client message from Payligent.com" , whole_message, ['moghrabi@gmail.com', 'mughrabi@gmail.com'])
+	send_me_email("New client message from Payligent.com" , whole_message, ['moghrabi@gmail.com',])
 	# except:
 	# 	response_data['message'] = 'Oh Snap! message was not sent correctly,'
 	return HttpResponse(json.dumps(response_data), content_type='application/json')
 
+# subscribe view (in the footer)
 def subscribe(request):
+	""" when users subscribe this view sends their email address as an email """
 	email = request.POST.get('sub_email','')
 	response_data = {}
 	response_data['message'] = "We have received your email!"
