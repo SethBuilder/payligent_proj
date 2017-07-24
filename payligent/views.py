@@ -28,7 +28,7 @@ def send_message(request):
 	response_data = {}
 	# try:
 	response_data['message'] = "We have received your message!"
-	send_me_email("New client message from Payligent.com" , whole_message, ['moghrabi@gmail.com',])
+	send_me_email("New client message from Payligent.com" , whole_message, ['moghrabi@gmail.com', 'mughrabi@gmail.com'])
 	# except:
 	# 	response_data['message'] = 'Oh Snap! message was not sent correctly,'
 	return HttpResponse(json.dumps(response_data), content_type='application/json')
