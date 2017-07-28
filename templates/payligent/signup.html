@@ -54,7 +54,19 @@
             <h2 class="fs-title">TELL US A LITTLE ABOUT YOUR BUSINESS</h2>
             <h3 class="fs-subtitle">This is step 2</h3>
             <input type="text" name="comname" placeholder="Company Name" id="comname" required />
-            <input type="url" name="comurl" placeholder="Company URL" id="comurl" required />
+            <input type="text" name="comurl" placeholder="Company URL" id="comurl" required onblur="checkURL(this)"/>
+
+            <script type="text/javascript">
+                function checkURL (abc) {
+                var string = abc.value;
+                if (!~string.indexOf("http")) {
+                  string = "http://" + string;
+                }
+                abc.value = string;
+                return abc
+              }
+            </script>
+
             <input type="email" name="comemail" placeholder="Company email address" id="comemail" required />
             <input type="button" name="previous" class="previous action-button" value="Previous"/>
             <input type="button" name="next" class="next action-button" value="Next" id="next2" />
