@@ -133,7 +133,7 @@
 							<li>Online Support</li>
 
 
-							<button class="btn btn-success">Get Started</button>
+							<a href=" {% url 'payligent:signup' 'bronze'%} "><button class="btn btn-success">Get Started</button></a>
 						</section>
 
 					</div>
@@ -153,7 +153,7 @@
 							<li>30 – day money-back guarantee</li>
 							<li>No security deposit</li>
 							<li>Online Support</li>
-							<button class="btn btn-success">Get Started</button>
+							<a href= "{% url 'payligent:signup' 'silver'%}"><button class="btn btn-success">Get Started</button></a>
 						</section>
 
 					</div>
@@ -175,7 +175,7 @@
 							<li>30 – day money-back guarantee</li>
 							<li>No security deposit</li>
 							<li>Online Support</li>
-							<button class="btn btn-success">Get Started</button>
+							<a href="{% url 'payligent:signup' 'gold' %}"><button class="btn btn-success">Get Started</button></a>
 						</section>
 
 					</div>
@@ -234,6 +234,7 @@
 	</div>
 
 	<!-- END CONTACT -->
+	{% block footer %}
 	<div id="footer-sec">
 		<div class="footer" id="footer">
 			<div class="container">
@@ -293,7 +294,9 @@
 			</div>
 		</div>
 	</div>
+	{% endblock %}
 </div>
+
 
 
 <script type="text/javascript">

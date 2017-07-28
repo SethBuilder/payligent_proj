@@ -42,3 +42,31 @@ def subscribe(request):
 	message = "subscribed email: " + email
 	send_me_email("New subscription from Payligent.com" , message, ['moghrabi@gmail.com'])
 	return HttpResponse(json.dumps(response_data), content_type='application/json')
+
+# subscribe to gold/silver/bronze package
+def signup(request, level):
+	""" when users subscribe to a package """
+	context_dict = {}
+	response_data = {}
+	context_dict['level'] = level
+	if request.method == 'POST':
+		phone = request.POST.get('phone', '')
+		email = request.POST.get('email','')
+		lname = request.POST.get('lname','')
+		fname = request.POST.get('fname','')
+		comname = request.POST.get('comname','')
+		comurl = request.POST.get('comurl','')
+		comemail = request.POST.get('comemail','')
+		address = request.POST.get('address','')
+		level = request.POST.get('level','')
+		
+
+		response_data['message'] = "We have received your email!"
+		whole_message = "first name: " + fname + "\nlast name: " + lname + "\nemail: " + email + "\nphone: " + \
+	phone + "\ncompany name: " + comname + '\ncompany email: ' + comemail + '\nlevel: ' + level + "\naddress: " + address
+		send_me_email("New " + level  + " package signup!", whole_message, ['moghrabi@gmail.com'])
+		return HttpResponse(json.dumps(response_data), content_type='application/json')
+
+	return render(request, 'payligent/signup.html', context_dict)
+
+
