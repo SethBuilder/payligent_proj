@@ -661,6 +661,8 @@ div.footer#footer {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 45px 0px;
+    align-items: center;
+    display: grid;
 }
 
 .package-form h1 {
