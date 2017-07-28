@@ -686,7 +686,7 @@ div.footer#footer {
     padding: 10px 20px;
     box-sizing: border-box;
     width: 80%;
-    margin: 0 10%;
+    margin: auto;
     opacity: 1;
     /*stacking fieldsets above each other*/
     position: relative;
@@ -803,6 +803,21 @@ div.footer#footer {
 /*end package signup*/
 @media screen and (max-width: 950px) {
 
+
+#msform {
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    opacity: .9;
+}
+
+
+.package-form h1 {
+   font-size: 30px;
+     
+}
+
 .pricing, .features, .testi {
      display: block;
      height: auto;
@@ -815,7 +830,7 @@ div.footer#footer {
 
 #footer-sec {
     height: 500px !important;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     }
 
 #contact {
