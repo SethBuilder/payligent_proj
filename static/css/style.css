@@ -18,7 +18,7 @@ body{
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow-x: ;
 }
 
 ::selection {
@@ -811,9 +811,44 @@ div.footer#footer {
 /*end package signup*/
 @media screen and (max-width: 950px) {
 
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.fs-title {
+    font-size: 10px;
+}
+
+#msform input, #msform textarea, #msform select {
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #E81B00;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 2px; 
+    margin: 2px 2px;
+}
+
 
 #msform {
-    width: 350px;
+    width: 95%;
     margin: auto;
     text-align: center;
     position: relative;
