@@ -40,7 +40,7 @@ def subscribe(request):
 	response_data = {}
 	response_data['message'] = "We have received your email!"
 	message = "subscribed email: " + email
-	send_me_email("New subscription from Payligent.com" , message, ['moghrabi@gmail.com'])
+	send_me_email("New subscription from Payligent.com" , message, ['moghrabi@gmail.com', "mughrabi@gmail.com"])
 	return HttpResponse(json.dumps(response_data), content_type='application/json')
 
 # subscribe to gold/silver/bronze package
@@ -64,7 +64,7 @@ def signup(request, level):
 		response_data['message'] = "We have received your email!"
 		whole_message = "first name: " + fname + "\nlast name: " + lname + "\nemail: " + email + "\nphone: " + \
 	phone + "\ncompany name: " + comname + '\ncompany email: ' + comemail + '\nlevel: ' + level + "\naddress: " + address
-		send_me_email("New " + level  + " package signup!", whole_message, ['moghrabi@gmail.com'])
+		send_me_email("New " + level  + " package signup!", whole_message, ['moghrabi@gmail.com', 'mughrabi@gmail.com'])
 		return HttpResponse(json.dumps(response_data), content_type='application/json')
 
 	return render(request, 'payligent/signup.html', context_dict)
