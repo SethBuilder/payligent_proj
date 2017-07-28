@@ -660,7 +660,7 @@ div.footer#footer {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 45px;
+    padding: 45px 0px;
 }
 
 .package-form h1 {
